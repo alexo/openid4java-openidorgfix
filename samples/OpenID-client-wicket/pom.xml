@@ -45,6 +45,16 @@
       <artifactId>log4j</artifactId>
       <version>1.2.14</version>
     </dependency>
+	 <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.6.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.6.1</version>
+      </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
@@ -69,8 +79,13 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpcore</artifactId>
-      <version>4.0.1</version>
+      <version>4.1.1</version>
     </dependency>
+	<dependency>	
+  	  <groupId>org.apache.httpcomponents</groupId>
+	  <artifactId>httpclient</artifactId>
+	  <version>4.1.1</version>
+	</dependency>
     <dependency>
       <groupId>joda-time</groupId>
 	  <artifactId>joda-time</artifactId>
@@ -82,14 +97,9 @@
       <version>1.9.14</version>
     </dependency>	
     <dependency>
-      <groupId>com.google.inject</groupId>
-      <artifactId>guice</artifactId>
-      <version>2.0</version>
-    </dependency>
-    <dependency>
       <groupId>org.openid4java</groupId>
-      <artifactId>openid4java-full</artifactId>
-      <version>0.9.5</version>
+      <artifactId>openid4java-nodeps</artifactId>
+      <version>0.9.6</version>
     </dependency>
 	<dependency>
       <groupId>org.apache.wicket</groupId>

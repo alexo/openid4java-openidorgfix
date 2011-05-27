@@ -7,7 +7,6 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.RequestCycle;
 import org.apache.wicket.protocol.http.RequestUtils;
 import org.joda.time.YearMonthDay;
-import org.openid4java.consumer.ConsumerException;
 import org.openid4java.consumer.ConsumerManager;
 import org.openid4java.consumer.InMemoryConsumerAssociationStore;
 import org.openid4java.consumer.InMemoryNonceVerifier;
@@ -200,19 +199,13 @@ public class RegistrationService {
 	 * @return ConsumerManager - The ConsumerManager object that handles
 	 *  communication with the openid4java API.
 	 */
-	private static ConsumerManager getConsumerManager() {
-		try {
-			if (consumerManager == null) {
-				consumerManager = new ConsumerManager();
-				consumerManager.setAssociations(new InMemoryConsumerAssociationStore());
-				consumerManager.setNonceVerifier(new InMemoryNonceVerifier(10000));
-			}
-		} catch (final ConsumerException e) {
-			final String message = "Exception creating ConsumerManager!";
-			log.error(message, e);
-			throw new RuntimeException(message, e);
-		}
-		return consumerManager;
+  private static ConsumerManager getConsumerManager() {
+    if (consumerManager == null) {
+      consumerManager = new ConsumerManager();
+      consumerManager.setAssociations(new InMemoryConsumerAssociationStore());
+      consumerManager.setNonceVerifier(new InMemoryNonceVerifier(10000));
+    }
+    return consumerManager;
 	}
   /**
    * Generates the returnToUrl parameter that is passed to the OP. The
