@@ -103,10 +103,10 @@ public class RegistrationService {
 			ret = getConsumerManager().authenticate(discoveryInformation, returnToUrl);
 			// Create the Simple Registration Request
 			final SRegRequest sRegRequest = SRegRequest.createFetchRequest();
-			sRegRequest.addAttribute("email", false);
-			sRegRequest.addAttribute("fullname", false);
-			sRegRequest.addAttribute("dob", false);
-			sRegRequest.addAttribute("postcode", false);
+			sRegRequest.addAttribute("email", true);
+			sRegRequest.addAttribute("fullname", true);
+			sRegRequest.addAttribute("dob", true);
+			sRegRequest.addAttribute("postcode", true);
 			ret.addExtension(sRegRequest);
 
 		} catch (final Exception e) {
