@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/"
+  xml:lang="en" lang="en">
+  <head>
+    <wicket:head>
+      <link href="styles/formlayout.css" rel="stylesheet" type="text/css" />
+    </wicket:head>
+  </head>
+  <body>
+    <form id="OpenIdLoginForm" wicket:id="form">
+      <h1>Please Login:</h1>
+      (Use steve/asdf)
+      <br />
+      <table border="0">
+        <tr>
+          <td><label>User ID:</label></td>
+          <td>
+            <input class="biginput" type="text" wicket:id="userId"/>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Password:</label></td>
+          <td>
+            <input class="biginput" type="password" wicket:id="password"/>
+            <input type="submit" wicket:id="loginButton" value="Login"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
